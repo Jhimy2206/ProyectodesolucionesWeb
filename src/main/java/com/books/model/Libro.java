@@ -2,7 +2,7 @@ package com.books.model;
 
 public class Libro {
 
-    private Long idLibro;
+    private int idLibro;
     private String titulo;
     private String autor;
     private String editorial;
