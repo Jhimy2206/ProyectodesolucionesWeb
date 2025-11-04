@@ -10,20 +10,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-//@Table(name = "tbl_categoria", schema = "Sistematicos")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Categoria {
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private int idCategoria;
+    private Integer idCategory;
 
-    @Column(nullable = false, length = 100)
-    private String nombre;
-
-    @Column(length = 250)
-    private String descripcion;
-
-    private boolean activa; // indica si la categoría está activa o no
+    @Column(nullable = false, length = 50, unique = true)
+    private String name;
 }
